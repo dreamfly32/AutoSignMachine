@@ -51,8 +51,8 @@ jobs:
     - name: Run 52pojie daily task
       if: ${{ env.ENABLE_52POJIE }}
       env:
-        htVD_2132_auth: ${{secrets.52pojie_htVD_2132_auth}}
-        htVD_2132_saltkey: ${{secrets.52pojie_htVD_2132_saltkey}}
+        htVD_2132_auth: ${{secrets.pojie52_htVD_2132_auth}}
+        htVD_2132_saltkey: ${{secrets.pojie52_htVD_2132_saltkey}}
       run: node index.js 52pojie --htVD_2132_auth=${htVD_2132_auth} --htVD_2132_saltkey=${htVD_2132_saltkey}
 
     # 运行 bilibili 签到任务
